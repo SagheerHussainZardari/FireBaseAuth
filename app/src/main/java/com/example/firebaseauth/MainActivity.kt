@@ -71,7 +71,16 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    fun forgotPassword(view: View) {}
+
+
+    fun forgotPassword(view: View) {
+        if (mAuth.currentUser != null) {
+            mAuth.sendPasswordResetEmail(mAuth.currentUser?.email.toString())
+            showToast("Password Reset Email Sent!")
+        } else
+            showToast("You Are Not Logged In...")
+
+    }
 
 
     fun showToast(message: String) {
