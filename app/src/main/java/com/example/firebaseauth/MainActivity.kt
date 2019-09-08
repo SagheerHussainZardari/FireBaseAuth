@@ -30,7 +30,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun logIn(view: View) {}
+    fun logIn(view: View) {
+        showToastS("Please Wait... Logging In")
+        mAuth.signInWithEmailAndPassword("sagheerhzardari@gmail.com", "12345678")
+            .addOnCompleteListener { task ->
+
+                if (task.isSuccessful)
+                    showToast("Logged In Successfully\nEmail: " + mAuth.currentUser?.email.toString())
+                else
+                    showToast(task.exception.toString())
+
+            }
+
+
+    }
     fun logOut(view: View) {}
     fun verifyEmail(view: View) {}
     fun forgotPassword(view: View) {}
