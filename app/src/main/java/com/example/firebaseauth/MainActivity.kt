@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
 
                 if (task.isSuccessful)
-                    showToast("Logged In Successfully\nEmail: " + mAuth.currentUser?.email.toString())
+                    showToast("LogIn Success\nEmail: " + mAuth.currentUser?.email.toString())
                 else
                     showToast(task.exception.toString())
 
@@ -44,14 +44,39 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    fun logOut(view: View) {}
-    fun verifyEmail(view: View) {}
+
+
+    fun logOut(view: View) {
+
+        if (mAuth.currentUser != null) {
+            mAuth.signOut()
+            showToast("LogOut Success!!")
+        } else
+            showToast("You Are Not Logged In...")
+
+    }
+
+
+    fun verifyEmail(view: View) {
+        if (mAuth.currentUser != null) {
+            if (mAuth.currentUser!!.isEmailVerified)
+                showToast("Your Email Is Already Verified")
+            else {
+                mAuth.currentUser?.sendEmailVerification()
+                showToast("Verification Email Sent!!")
+            }
+        } else {
+            showToastS("Please LoginFirst")
+        }
+
+
+    }
     fun forgotPassword(view: View) {}
+
 
     fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
-
     fun showToastS(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
