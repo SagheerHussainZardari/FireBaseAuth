@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "524454368358",
+    "firebase_url": "https://practiseproject-ff670.firebaseio.com",
+    "project_id": "practiseproject-ff670",
+    "storage_bucket": "practiseproject-ff670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524454368358:android:7c2ab672d94081615789a7",
+        "android_client_info": {
+          "package_name": "com.example.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524454368358-djpalbc5oeugesn4r6502hisvnud138f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaseauth",
+            "certificate_hash": "519caa28eb25438be782f08c38faa019e1a718bf"
+          }
+        },
+        {
+          "client_id": "524454368358-6qjjbkr5ckii5p17tc4f7ggc31sc04ub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwMCoY0MQuwLcyE6FrHfKH0jOGey4HEWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524454368358-6qjjbkr5ckii5p17tc4f7ggc31sc04ub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
